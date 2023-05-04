@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portfolio-firebase-auth-bd6f8.web.app")
 public class EstudioController {
     
      @Autowired

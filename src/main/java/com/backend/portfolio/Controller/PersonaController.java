@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portfolio-firebase-auth-bd6f8.web.app")
 
 @RestController
 public class PersonaController {
@@ -49,23 +48,7 @@ public class PersonaController {
     }
      
     @PutMapping ("personas/editar/{id}")
-    /*
-    public Persona editPersona (@PathVariable Long id,
-                                @RequestParam("nombre") String nuevoNombre,
-                                @RequestParam("apellido") String nuevoApellido,
-                                @RequestParam("edad") Long nuevaEdad){
-        
-        Persona perso = interPersona.findPersona(id);
-        
-        perso.setApellido(nuevoApellido);
-        perso.setNombre(nuevoNombre);
-        perso.setEdad(nuevaEdad);
-        
-        interPersona.savePersona(perso);
-        
-        return perso;
-    }
-    */
+   
      public Persona editPersona(@PathVariable Long id,
                                @RequestBody Persona perso){
           perso.setId(id);
